@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Time</title>
+    <style>
+          body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            background-image: url('./images/Pink White Elegant Watercolor Background Instagram Story.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+            width: 90%;
+            max-width: 360px; /* Adjust as needed */
+            height: 70vh;
+            border-radius: 25px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 5%;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(236, 214, 214, 0.1);
+        }
+
+        .main-box {
+            width: 100%;
+            height: 100%;
+            border-radius: 25px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around; /* Adjust as needed */
+            padding: 20px;
+        }
+
+        .row {
+            margin-top: 10px;
+            border: 2px solid rgb(114, 64, 70);
+            box-shadow: 12px 12px 2px 1px rgb(167, 118, 124);
+            width: 100%;
+            height: 5vh;
+            border-radius: 25px;
+            font-size: large;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 10px;
+            align-items: center;
+            text-align: center;
+        }
+
+        input[type='radio'] {
+            transform: scale(1.5); /* Adjust size as needed */
+            margin-right: 10px;
+        }
+
+        #btn {
+            width: 70%;
+            height: 3vh;
+            border: 2px solid rgb(114, 64, 70);
+            background: transparent;
+            margin-top: 20px;
+            border-radius: 25px;
+            color: rgb(10, 10, 10);
+            cursor: pointer;
+            font-size: 1rem;
+            padding: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        #btn:hover {
+            background-color: rgb(114, 64, 70);
+        }
+
+        h1 {
+            margin-top: 10%;
+            color: rgb(0, 0, 0);
+            text-align: center;
+        }
+
+        .feedback {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .feedback h2 {
+            font-size: 1.2rem;
+            margin: 10px 0;
+        }
+
+        .feedback button {
+            width: 70%;
+            height: 3vh;
+            border: 2px solid rgb(114, 64, 70);
+            background: transparent;
+            border-radius: 25px;
+            color: rgb(10, 10, 10);
+            cursor: pointer;
+            font-size: 1rem;
+            padding: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .feedback button:hover {
+            background-color: rgb(114, 64, 70);
+        }
+
+        /* Media Queries for responsiveness */
+        @media (max-width: 480px) {
+            .container {
+                width: 100%;
+             
+                margin-top: 10px;
+            }
+            .main-box {
+            width: 90%;
+            height: 100%;
+            border-radius: 25px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around; /* Adjust as needed */
+            padding: 20px;
+        }
+            .row {
+                height: auto;
+                font-size: medium;
+                padding: 10px;
+            }
+
+            #btn {
+                width: 90%;
+                height: auto;
+                font-size: 0.9rem;
+                padding: 15px;
+            }
+
+            h1 {       
+                font-size: 1.2rem;
+            }
+
+            .feedback {
+                width: 90%;
+                margin: 0 auto;
+            }
+
+            .feedback h2 {
+                font-size: 1rem;
+            }
+
+            .feedback button {
+                width: 90%;
+                height: auto;
+                font-size: 0.9rem;
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Quiz Time</h1>
+        <div class="main-box">
+            <h3 id="questionbox"></h3>
+            <div class="row">
+                <input class="options" type="radio" id="a" name="option">
+                <label  id="option_1" for="option1"></label>
+            </div>
+            <div class="row">
+                <input class="options" type="radio" id="b" name="option">
+                <label id="option_2" for="option2"></label>
+            </div>
+            <div class="row">
+                <input  class="options" type="radio" id="c" name="option">
+                <label  id="option_3" for="option3"></label>
+            </div>
+            <div class="row">
+                <input class="options" type="radio" id="d" name="option">
+                <label id="option_4" for="option4"> </label>
+            </div>
+            <button id="btn" type="submit" >Submit</button>
+
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="index.js"></script>
+</body>
+</html>
